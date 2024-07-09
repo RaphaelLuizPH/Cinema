@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbarButtonsContainer">
+          <h1 class="baskervville-sc-regular">O CINEMA</h1>
+          <div class="buttonContainer">
+            <button>Em cartaz</button>
+            <button>Em breve</button>
+            <button>Localização</button>
+            <button>Promoções</button>
+          </div>
+        </div>
+        <div class="cart">
+          <i class="fa-solid fa-film fa-5x" style="color: #ffffff"></i>
+          <div class="Cartcircle">
+            <p id="CartQuantity"></p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="Mainbackground">
+        <h1>O SEU CINEMA</h1>
+      </div>
+    </main>
+
+    <section class="catalog">
+      <h1>EM CARTAZ</h1>
+      <div class="catalogCont">
+        <div class="movieCont">
+          <div class="movieCard">
+            <img src="images/knoll.webp" alt="" />
+            <div class="MovieInfo">
+             
+            </div>
+            <div class="MovieCardButtons">
+              <i
+                class="fa-solid fa-plus"
+                style="color: #ff0000"
+                onclick="AddtoCart(0)"
+              ></i>
+            </div>
+          </div>
+          <div class="movieCard">
+            <img src="images/submarine.webp" alt="" />
+            <div class="MovieInfo">
+             
+            </div>
+            <div class="MovieCardButtons">
+              <i
+                class="fa-solid fa-plus"
+                style="color: #ff0000"
+                onclick="AddtoCart(1)"
+              ></i>
+            </div>
+          </div>
+          <div class="movieCard">
+            <img src="images/castle.webp" alt="" />
+            <div class="MovieInfo">
+            </div>
+            <div class="MovieCardButtons">
+              <i
+                class="fa-solid fa-plus"
+                style="color: #ff0000"
+                onclick="AddtoCart(2)"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+    <script
+      src="https://kit.fontawesome.com/fb2e7191e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fb2e7191e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
