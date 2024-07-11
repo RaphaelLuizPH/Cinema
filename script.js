@@ -1,49 +1,85 @@
 let AddtoCartButton = document.querySelector(".Cartcircle");
 let CartQuant = document.getElementById("CartQuantity");
 let MovieButtons = document.querySelectorAll(".MovieCardButtons");
+const CatalogPages = Array.from(document.querySelectorAll(".movieCont"));
+
+const DeadpooleWolverine = {
+  name: "Deadpool & Wolverine",
+  date: "24 de julho",
+  duration: "2h",
+  time: "23:30",
+  cover: "images/Wolverine-e-Deadpool.jpg",
+};
+
+const Maxxxine = {
+  name: "Maxxxine",
+  date: "17 de julho",
+  duration: "2h",
+  time: "19:30",
+  cover: "images/maxxxine.jpg",
+};
+
+
+const Longlegs = {
+  name: "Longlegs",
+  date: "05 de julho",
+  duration: "1h30m",
+  time: "00:30",
+  cover: "images/longlegs.jpg",
+};
+
+
 
 const TheMenFromKnoll = {
   name: "The Men From Knoll",
   date: "24 de julho",
-  duration: "2h5m",
+  duration: "1h5m",
   time: "23:30",
+  cover: "images/knoll.webp",
 };
 
 const Submarine = {
   name: "Submarine",
   date: "12 de julho",
   duration: "1h10m",
-  time: "22:30",
+  time: "22:45",
+  cover: "images/submarine.webp",
 };
 
 const CastleDoctrine = {
-  name: "Castrle Doctrine",
+  name: "Castle Doctrine",
   date: "15 de julho",
-  duration: "2h0m",
-  time: "21:30",
+  duration: "1h40m",
+  time: "21:00",
+  cover: "images/castle.webp",
 };
 
 const Cart = [];
-const Catalog = [TheMenFromKnoll, Submarine, CastleDoctrine];
+
+const Catalog = [
+  TheMenFromKnoll,
+  Submarine,
+  CastleDoctrine,
+  DeadpooleWolverine,
+  Longlegs,
+  Maxxxine,
+];
 
 CartHas = 0;
 CartQuant.innerHTML = CartHas;
 
 function AddtoCart(n) {
-  for (let i in MovieButtons) {
-    if (n == i) {
-      Cart.push(Catalog[n]);
-    }
-  }
+  Cart.push(Catalog[n]);
   AddtoCartButton.classList.toggle("AddtoCart");
   CartQuant.innerHTML = Cart.length;
 }
 
 let MovieCard = document.querySelectorAll(".MovieInfo");
+let MoviePoster = document.querySelectorAll(".MoviePoster");
 
 for (let i = 0; i < MovieCard.length; i++) {
-  let CardFrag = document.createDocumentFragment();
 
+  let CardFrag = document.createDocumentFragment();
   let MovieName = document.createElement("p");
   let MovieDuration = document.createElement("p");
   let MovieTime = document.createElement("p");
@@ -66,6 +102,7 @@ for (let i = 0; i < MovieCard.length; i++) {
   CardFrag.appendChild(MovieTime);
 
   MovieCard[i].appendChild(CardFrag);
+  MoviePoster[i].setAttribute("src", Catalog[i].cover);
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
