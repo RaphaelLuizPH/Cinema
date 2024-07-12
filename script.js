@@ -76,7 +76,7 @@ function AddtoCart(n) {
 
 let MovieCard = document.querySelectorAll(".MovieInfo");
 let MoviePoster = document.querySelectorAll(".MoviePoster");
-
+let MovieCards = document.querySelectorAll('.movieCard')
 for (let i = 0; i < MovieCard.length; i++) {
 
   let CardFrag = document.createDocumentFragment();
@@ -101,8 +101,10 @@ for (let i = 0; i < MovieCard.length; i++) {
   CardFrag.appendChild(LabelTime);
   CardFrag.appendChild(MovieTime);
 
+
   MovieCard[i].appendChild(CardFrag);
   MoviePoster[i].setAttribute("src", Catalog[i].cover);
+
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
